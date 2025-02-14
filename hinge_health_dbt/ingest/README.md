@@ -22,7 +22,7 @@ Steps:
    ```bash
     pg_restore -U <computer-username> -d postgres data.dump
     ```
-   
+
 3. Install Dependencies
     Pandas
     ```bash
@@ -47,5 +47,3 @@ Steps:
    - us_softball_league.txt
    - unity_golf_club.csv
    - companies.csv
-   
- 

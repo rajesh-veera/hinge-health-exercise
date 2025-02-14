@@ -1,4 +1,4 @@
-WITH softball_members AS 
+WITH softball_members AS
 (
     SELECT * from {{ ref('stg_us_softball_league') }}
 )
@@ -6,7 +6,7 @@ WITH softball_members AS
 (
     SELECT * from {{ ref('stg_unity_golf_club') }}
 )
-, companies AS 
+, companies AS
 (
     SELECT * from {{ ref('stg_companies') }}
 )

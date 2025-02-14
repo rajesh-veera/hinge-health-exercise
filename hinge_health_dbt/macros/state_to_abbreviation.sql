@@ -1,5 +1,5 @@
 {% macro state_to_abbreviation(state_column) %}
-    CASE 
+    CASE
         WHEN {{ state_column }} ILIKE 'Alabama' THEN 'AL'
         WHEN {{ state_column }} ILIKE 'Alaska' THEN 'AK'
         WHEN {{ state_column }} ILIKE 'Arizona' THEN 'AZ'

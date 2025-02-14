@@ -12,18 +12,20 @@ DB_HOST = "localhost"
 DB_NAME = "postgres"
 DB_USER = "postgres"
 DB_PASSWORD = "postgres"
-DB_PORT = 5432  
-
+DB_PORT = 5432
 
 
 # File paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-US_SOFTBALL_LEAGUE_FILE =  os.path.join(SCRIPT_DIR, "us_softball_league.txt")
+US_SOFTBALL_LEAGUE_FILE = os.path.join(SCRIPT_DIR, "us_softball_league.txt")
 UNITY_GOLF_CLUB_FILE = os.path.join(SCRIPT_DIR, "unity_golf_club.txt")
 COMPANIES_FILE = os.path.join(SCRIPT_DIR, "company.csv")
 
 # Create Postgres engine
-engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
+engine = create_engine(
+    f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
+
 
 # create database connection
 def create_connection():
@@ -34,12 +36,13 @@ def create_connection():
             database=DB_NAME,
             user=DB_USER,
             password=DB_PASSWORD,
-            port=DB_PORT
+            port=DB_PORT,
         )
         print("Connected to PostgreSQL database!")
     except OperationalError as e:
         print(f"Error connecting to database: {e}")
     return conn
+
 
 # create tables
 def create_tables(conn):
@@ -48,24 +51,31 @@ def create_tables(conn):
 
         # Create companies table
 
-        cursor.execute("""
+        cursor.execute(
+            """
             DROP TABLE IF EXISTS companies
-        """)
+        """
+        )
 
-        cursor.execute("""
+        cursor.execute(
+            """
             CREATE TABLE IF NOT EXISTS companies (
                 company_id SERIAL PRIMARY KEY,
                 company_name TEXT NOT NULL
             )
-        """)
+        """
+        )
 
         # Create us_softball_league table
 
-        cursor.execute("""
+        cursor.execute(
+            """
             DROP TABLE IF EXISTS us_softball_league CASCADE
-        """)
+        """
+        )
 
-        cursor.execute("""
+        cursor.execute(
+            """
             CREATE TABLE IF NOT EXISTS us_softball_league (
                 id SERIAL PRIMARY KEY,
                 name TEXT NOT NULL,
@@ -76,15 +86,19 @@ def create_tables(conn):
                 joined_league INTEGER,
                 us_state TEXT
             )
-        """)
+        """
+        )
 
         # Create unity_golf_club table
 
-        cursor.execute("""
+        cursor.execute(
+            """
             DROP TABLE IF EXISTS unity_golf_club CASCADE
-        """)
+        """
+        )
 
-        cursor.execute("""
+        cursor.execute(
+            """
             CREATE TABLE IF NOT EXISTS unity_golf_club (
                 id SERIAL PRIMARY KEY,
                 first_name TEXT NOT NULL,
@@ -96,12 +110,14 @@ def create_tables(conn):
                 member_since INTEGER,
                 state TEXT
             )
-        """)
+        """
+        )
 
         conn.commit()
         print("Tables created successfully!")
     except Error as e:
         print(f"Error creating tables: {e}")
+
 
 # Load data
 def load_data(conn, file_path, table_name, chunk_size=1000):
@@ -109,7 +125,11 @@ def load_data(conn, file_path, table_name, chunk_size=1000):
         cursor = conn.cursor()
 
         # Read file in chunks
-        for chunk in pd.read_csv(file_path, sep="\t" if table_name == "us_softball_league" else ",", chunksize=chunk_size):
+        for chunk in pd.read_csv(
+            file_path,
+            sep="\t" if table_name == "us_softball_league" else ",",
+            chunksize=chunk_size,
+        ):
             # Clean column names
             chunk.columns = [col.strip() for col in chunk.columns]
 
@@ -119,7 +139,7 @@ def load_data(conn, file_path, table_name, chunk_size=1000):
             # Insert data into the table
             insert_query = sql.SQL("INSERT INTO {} ({}) VALUES %s").format(
                 sql.Identifier(table_name),
-                sql.SQL(", ").join(map(sql.Identifier, chunk.columns))
+                sql.SQL(", ").join(map(sql.Identifier, chunk.columns)),
             )
             execute_values(cursor, insert_query, data_tuples)
 
@@ -127,6 +147,7 @@ def load_data(conn, file_path, table_name, chunk_size=1000):
         print(f"Data loaded into {table_name} successfully!")
     except Error as e:
         print(f"Error loading data into {table_name}: {e}")
+
 
 # Main function
 def main():
@@ -149,6 +170,7 @@ def main():
 
     # Close the connection
     conn.close()
+
 
 # Run the script
 if __name__ == "__main__":

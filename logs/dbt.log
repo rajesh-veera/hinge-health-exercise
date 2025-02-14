@@ -5,9 +5,9 @@
 [0m19:24:44.077877 [info ] [MainThread]: Running with dbt=1.9.2
 [0m19:24:44.078186 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rajesh/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init hinge_health_dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
 [0m19:24:44.084989 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/Users/rajesh/.dbt')}
-[0m19:24:44.085181 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m19:24:44.085181 [info ] [MainThread]: Creating dbt configuration folder at
 [0m19:24:44.085922 [debug] [MainThread]: Starter project path: /Users/rajesh/hinge-health-exercise/env/lib/python3.9/site-packages/dbt/include/starter_project
-[0m19:24:44.088848 [info ] [MainThread]: 
+[0m19:24:44.088848 [info ] [MainThread]:
 Your new dbt project "hinge_health_dbt" was created!
 
 For more information on how to configure the profiles.yml file,
@@ -40,7 +40,7 @@ Happy modeling!
 Runtime Error
   No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m11:51:48.071700 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.045907583, "process_in_blocks": "0", "process_kernel_time": 0.109833, "process_mem_max_rss": "86097920", "process_out_blocks": "0", "process_user_time": 0.613661}
 [0m11:51:48.071999 [debug] [MainThread]: Command `dbt test` failed at 11:51:48.071937 after 0.05 seconds
 [0m11:51:48.072216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103270df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041056d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104105610>]}
@@ -56,7 +56,7 @@ Runtime Error
 Runtime Error
   No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m11:52:28.921395 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.044382915, "process_in_blocks": "0", "process_kernel_time": 0.12365, "process_mem_max_rss": "86261760", "process_out_blocks": "0", "process_user_time": 0.620396}
 [0m11:52:28.921638 [debug] [MainThread]: Command `dbt run` failed at 11:52:28.921582 after 0.04 seconds
 [0m11:52:28.921828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105304e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619b520>]}
@@ -131,7 +131,7 @@ Runtime Error
 Runtime Error
   No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m21:11:50.127118 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.0595455, "process_in_blocks": "0", "process_kernel_time": 0.331289, "process_mem_max_rss": "105709568", "process_out_blocks": "0", "process_user_time": 1.400576}
 [0m21:11:50.127392 [debug] [MainThread]: Command `dbt run` failed at 21:11:50.127339 after 0.06 seconds
 [0m21:11:50.127602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fdd760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10725a700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10725a5e0>]}
@@ -147,9 +147,25 @@ Runtime Error
 Runtime Error
   No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m21:12:10.967697 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.043471042, "process_in_blocks": "0", "process_kernel_time": 0.115777, "process_mem_max_rss": "86310912", "process_out_blocks": "0", "process_user_time": 0.617195}
 [0m21:12:10.967946 [debug] [MainThread]: Command `dbt deps` failed at 21:12:10.967888 after 0.04 seconds
 [0m21:12:10.968131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d75e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0a400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0a250>]}
 [0m21:12:10.968315 [debug] [MainThread]: Flushing usage events
 [0m21:12:11.349509 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:06:31.666637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096e9670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae803d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae80bb0>]}
+
+
+============================== 07:06:31.684686 | cacf0171-4a02-485d-a7f2-6ac353d945e0 ==============================
+[0m07:06:31.684686 [info ] [MainThread]: Running with dbt=1.9.2
+[0m07:06:31.684998 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rajesh/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt test', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m07:06:31.685381 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+
+[0m07:06:31.686630 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.059634794, "process_in_blocks": "0", "process_kernel_time": 0.183254, "process_mem_max_rss": "106971136", "process_out_blocks": "0", "process_user_time": 1.057286}
+[0m07:06:31.686896 [debug] [MainThread]: Command `dbt test` failed at 07:06:31.686842 after 0.06 seconds
+[0m07:06:31.687093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096e9670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad01250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad01130>]}
+[0m07:06:31.687281 [debug] [MainThread]: Flushing usage events
+[0m07:06:32.067723 [debug] [MainThread]: An error was encountered while trying to flush usage events
