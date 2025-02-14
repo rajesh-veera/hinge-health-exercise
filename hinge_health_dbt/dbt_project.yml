@@ -32,6 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   hinge_health_dbt:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+    intermediate:
+      +materialized: table
       

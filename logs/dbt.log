@@ -30,3 +30,94 @@ Happy modeling!
 [0m19:26:26.115209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032dacd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041d9850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103c4ea90>]}
 [0m19:26:26.116708 [debug] [MainThread]: Flushing usage events
 [0m19:26:26.536280 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:51:48.067067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103270df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041195e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104119160>]}
+
+
+============================== 11:51:48.069742 | 27261c38-d24d-49d1-8297-5897aa2a82f7 ==============================
+[0m11:51:48.069742 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:51:48.070065 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/rajesh/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:51:48.070403 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:51:48.071700 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.045907583, "process_in_blocks": "0", "process_kernel_time": 0.109833, "process_mem_max_rss": "86097920", "process_out_blocks": "0", "process_user_time": 0.613661}
+[0m11:51:48.071999 [debug] [MainThread]: Command `dbt test` failed at 11:51:48.071937 after 0.05 seconds
+[0m11:51:48.072216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103270df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041056d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104105610>]}
+[0m11:51:48.072422 [debug] [MainThread]: Flushing usage events
+[0m11:51:48.470423 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:52:28.916541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105304e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061af520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061aff70>]}
+
+
+============================== 11:52:28.919530 | b3e6da66-caba-41e5-ba86-4f9317f41c5d ==============================
+[0m11:52:28.919530 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:52:28.919910 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rajesh/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_companies', 'send_anonymous_usage_stats': 'True'}
+[0m11:52:28.920239 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/rajesh/hinge-health-exercise/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:52:28.921395 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.044382915, "process_in_blocks": "0", "process_kernel_time": 0.12365, "process_mem_max_rss": "86261760", "process_out_blocks": "0", "process_user_time": 0.620396}
+[0m11:52:28.921638 [debug] [MainThread]: Command `dbt run` failed at 11:52:28.921582 after 0.04 seconds
+[0m11:52:28.921828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105304e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10619b520>]}
+[0m11:52:28.922019 [debug] [MainThread]: Flushing usage events
+[0m11:52:29.283013 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:21:42.184854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10705ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ef94c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ef9f10>]}
+
+
+============================== 15:21:42.187856 | 4d33169f-79c7-4210-86a9-cee56c648459 ==============================
+[0m15:21:42.187856 [info ] [MainThread]: Running with dbt=1.9.2
+[0m15:21:42.188223 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rajesh/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:21:42.195856 [info ] [MainThread]: dbt version: 1.9.2
+[0m15:21:42.196068 [info ] [MainThread]: python version: 3.9.6
+[0m15:21:42.196229 [info ] [MainThread]: python path: /Users/rajesh/hinge-health-exercise/env/bin/python
+[0m15:21:42.196382 [info ] [MainThread]: os info: macOS-13.2.1-arm64-arm-64bit
+[0m15:21:42.241626 [info ] [MainThread]: Using profiles dir at /Users/rajesh/.dbt
+[0m15:21:42.241908 [info ] [MainThread]: Using profiles.yml file at /Users/rajesh/.dbt/profiles.yml
+[0m15:21:42.242084 [info ] [MainThread]: Using dbt_project.yml file at /Users/rajesh/hinge-health-exercise/dbt_project.yml
+[0m15:21:42.242400 [info ] [MainThread]: adapter type: postgres
+[0m15:21:42.242598 [info ] [MainThread]: adapter version: 1.9.0
+[0m15:21:42.242771 [info ] [MainThread]: Configuration:
+[0m15:21:42.242926 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:21:42.243072 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:21:42.243212 [info ] [MainThread]: Required dependencies:
+[0m15:21:42.243383 [debug] [MainThread]: Executing "git --help"
+[0m15:21:42.261934 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:21:42.262430 [debug] [MainThread]: STDERR: "b''"
+[0m15:21:42.262630 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:21:42.262836 [info ] [MainThread]: Connection:
+[0m15:21:42.263039 [info ] [MainThread]:   host: localhost
+[0m15:21:42.263191 [info ] [MainThread]:   port: 5432
+[0m15:21:42.263329 [info ] [MainThread]:   user: postgres
+[0m15:21:42.263466 [info ] [MainThread]:   database: postgres
+[0m15:21:42.263601 [info ] [MainThread]:   schema: public
+[0m15:21:42.263734 [info ] [MainThread]:   connect_timeout: 10
+[0m15:21:42.263869 [info ] [MainThread]:   role: None
+[0m15:21:42.264006 [info ] [MainThread]:   search_path: None
+[0m15:21:42.264141 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:21:42.264274 [info ] [MainThread]:   sslmode: None
+[0m15:21:42.264406 [info ] [MainThread]:   sslcert: None
+[0m15:21:42.264541 [info ] [MainThread]:   sslkey: None
+[0m15:21:42.264673 [info ] [MainThread]:   sslrootcert: None
+[0m15:21:42.264808 [info ] [MainThread]:   application_name: dbt
+[0m15:21:42.264943 [info ] [MainThread]:   retries: 1
+[0m15:21:42.265291 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:21:42.337705 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:21:42.361050 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:21:42.361257 [debug] [MainThread]: On debug: select 1 as id
+[0m15:21:42.361406 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:21:42.490754 [debug] [MainThread]: SQL status: SELECT 1 in 0.129 seconds
+[0m15:21:42.491458 [debug] [MainThread]: On debug: Close
+[0m15:21:42.491701 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:21:42.491924 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:21:42.492117 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/rajesh/hinge-health-exercise/dbt_project.yml> not found
+
+[0m15:21:42.493882 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.34943533, "process_in_blocks": "0", "process_kernel_time": 0.188877, "process_mem_max_rss": "102481920", "process_out_blocks": "0", "process_user_time": 0.702576}
+[0m15:21:42.494192 [debug] [MainThread]: Command `dbt debug` failed at 15:21:42.494117 after 0.35 seconds
+[0m15:21:42.494422 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:21:42.494646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10705ce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082e06d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10830bf70>]}
+[0m15:21:42.494919 [debug] [MainThread]: Flushing usage events
+[0m15:21:42.909273 [debug] [MainThread]: An error was encountered while trying to flush usage events
