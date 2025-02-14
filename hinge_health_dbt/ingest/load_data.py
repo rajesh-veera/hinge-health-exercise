@@ -1,3 +1,9 @@
+## Description
+"""
+    This Python script loads data from text files into a PostgreSQL database.
+    It processes the data in chunks to handle large datasets that do not fit into RAM.
+"""
+
 import pandas as pd
 import psycopg2
 from psycopg2 import sql
