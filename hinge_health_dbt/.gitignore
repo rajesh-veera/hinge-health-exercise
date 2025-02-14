@@ -1,0 +1,17 @@
+# Virtual Environment
+.venv/
+Pipfile.lock
+
+# DBT
+target/
+dbt_packages/
+logs/
+
+# Python
+_pycache_/
+*.py[cod]
+*$py.class
+
+# IDE
+.idea/
+.vscode/
