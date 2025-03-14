@@ -1,0 +1,44 @@
+version: 2
+sources:
+  - name: raw
+    database: postgres
+    schema: public
+    tables:
+      - name: us_softball_league
+        columns:
+          - name: player_id
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: name
+          - name: date_of_birth
+          - name: company_id
+          - name: last_active
+          - name: score
+          - name: joined_league
+          - name: us_state
+
+      - name: unity_golf_club
+        columns:
+          - name: player_id
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: first_name
+          - name: last_name
+          - name: dob
+          - name: company_id
+          - name: last_active
+          - name: score
+          - name: member_since
+          - name: state
+
+      - name: companies
+        columns:
+          - name: company_id
+            tests:
+              - unique
+              - not_null
+          - name: company_name
