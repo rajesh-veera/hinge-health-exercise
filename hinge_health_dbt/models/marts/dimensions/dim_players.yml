@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_players
+    description: >
+      This model contains players data from staging table.
+    columns:
+      - name: player_sk
+        description: Unique identifier for the player based on player full name and date of birth
+        tests:
+          - unique
+          - not_null
+      - name: player_full_name
+        description: Full name of the player
+        tests:
+          - not_null
+      - name: date_of_birth
+        description: Date of birth of the player
+        tests:
+          - not_null
+        description: Name of the company
+      - name: loaded_at
+        description: >
+          The timestamp when the record was loaded into the database
+          from the source system
+        tests:
+          - not_null

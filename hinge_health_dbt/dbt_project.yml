@@ -36,3 +36,9 @@ models:
       +materialized: view
     intermediate:
       +materialized: table
+    marts:
+      +materialized: table
+
+tests:
+  hinge_health_dbt:
+    +severity: warn

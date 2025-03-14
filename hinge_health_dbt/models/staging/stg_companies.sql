@@ -1,5 +1,4 @@
-SELECT
-    company_id,
-    company_name
-FROM {{ source('raw', 'companies') }}
-WHERE company_id IS NOT NULL
+select
+    company_id::int as company_id,
+    trim(company_name)::text as company_name
+from {{ source('raw', 'companies') }}
