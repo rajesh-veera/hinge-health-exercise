@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: agg_company_stats
+    description: >
+      This model contains aggregated statistics for companies.
+    columns:
+      - name: company_name
+        description: Name of the company
+        tests:
+          - unique
+          - not_null
+      - name: total_players
+        description: Total number of players in the company
+        tests:
+          - not_null
+      - name: avg_score
+        description: Average score of the company
+        tests:
+          - not_null
+      - name: avg_age_when_last_active
+        description: Average age of the players when they were last active
+        tests:
+          - not_null
+      - name: total_states_played
+        description: Total number of states where the company has players
+        tests:
+          - not_null
+      - name: best_player
+        description: Name of the best player in the company
+        tests:
+          - not_null
+      - name: highest_score_by_best_player
+        description: Highest score in the company by the best player
+        tests:
+          - not_null
+      - name: loaded_at
+        tests:
+          - not_null
+
+  - name: agg_player_stats
+    description: >
+      This model contains aggregated statistics for players.
+    columns:
+      - name: player_full_name
+        description: Full Name of the player
+        tests:
+          - not_null
+      - name: games_played
+        description: Total number of games played by the player
+        tests:
+          - not_null
+      - name: avg_score
+        description: Average score of the player
+        tests:
+          - not_null
+      - name: total_score
+        description: Total score of the player
+        tests:
+          - not_null
+      - name: last_active_date
+        description: Date when the player was last active
+        tests:
+          - not_null
+      - name: avg_age_when_last_active
+        description: Average age of the players when they were last active
+        tests:
+          - not_null
+      - name: total_states_played
+        description: Total number of states where the player has played
+        tests:
+          - not_null
+      - name: total_companies_played
+        description: Total number of companies where the player has played
+        tests:
+          - not_null
+      - name: loaded_at
+        tests:
+          - not_null
