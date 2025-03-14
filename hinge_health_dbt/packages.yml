@@ -1,0 +1,7 @@
+packages:
+
+  - package: dbt-labs/dbt_utils
+    version: [">=0.9.0", "<2.0.0"] #audit_helper requirement as of 5/22/23
+
+  - package: dbt-labs/audit_helper
+    version: 0.9.0

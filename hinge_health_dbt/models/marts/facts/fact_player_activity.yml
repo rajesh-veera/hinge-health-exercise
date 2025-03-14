@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fact_player_activity
+    description: >
+      This model contains player activity data from staging tables and dimensions.
+    columns:
+      - name: player_sk
+        description: Unique identifier for the player from players dimension
+      - name: company_id
+        description: >
+          Unique identifier for the company from companies dimension
+      - name: last_activity
+        description: >
+          The last active date of the player
+      - name: member_since
+        description: >
+          The date when the player joined the platform
+      - name: state
+        description: >
+          The state they have represented in the game
+      - name: score
+        description: >
+          The score of the player
+      - name: age
+        description: >
+          The age of the player based on their last active date
+      - name: years_since_last_active
+        description: >
+          The number of years since the player was last active
+      - name: current_age_years
+        description: >
+          The current age of the player in years
+      - name: source
+        description: >
+          The source of the data
+      - name: loaded_at
+        description: >
+          The timestamp when the record was loaded into the database
+          from the source system
+        tests:
+          - not_null

@@ -30,7 +30,19 @@ hinge-health-exercise/
 │   │   ├── stg_us_softball_league.sql
 │   │   └── stg_unity_golf_club.sql
 │   ├── intermediate/
-│   │   └── int_combined_members.sql
+│   │   └── int_members.sql
+│   ├── marts/
+│   │   ── dimensions/
+|   |       |── dim_companies.sql
+|   |       |── dim_companies.yml
+|   |       |── dim_players.sql
+|   |       |── dim_players.yml
+│   │   ── facts/
+|   |       |── fact_player_activity.sql
+|   |       |── fact_player_activity.yml
+|   |   |── agg_company_stats.sql
+|   |   |── agg_player_stats.sql
+|   |   |── metrics.yml
 ├── macros/
 │   └── state_name_to_abbreviation.sql
 └── tests/
@@ -111,6 +123,12 @@ pipenv run flake8 .
 # Run all pre-commit checks manually
 pipenv run pre-commit run --all-files
 ```
+
+## Project Tests
+   ![screenshot](images/tests.png)
+
+## Project Lineage
+   ![screenshot](images/lineage.png)
 
 ## Pre-commit Hooks
 

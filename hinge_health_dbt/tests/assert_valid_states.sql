@@ -1,5 +1,7 @@
+{{ config(error_if = '>50') }}
+
 WITH combined_members AS (
-    SELECT * FROM {{ ref('int_combined_members') }}
+    SELECT * FROM {{ ref('int_members') }}
 ),
 
 valid_states AS (

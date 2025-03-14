@@ -5,8 +5,8 @@ sources:
     schema: public
     tables:
       - name: us_softball_league
+        description: List of softball players from US Softball League
         columns:
-          - name: player_id
           - name: id
             tests:
               - unique
@@ -20,8 +20,8 @@ sources:
           - name: us_state
 
       - name: unity_golf_club
+        description: List of golf club players from Unity Golf Club
         columns:
-          - name: player_id
           - name: id
             tests:
               - unique
@@ -30,12 +30,15 @@ sources:
           - name: last_name
           - name: dob
           - name: company_id
+            tests:
+              - not_null
           - name: last_active
           - name: score
           - name: member_since
           - name: state
 
       - name: companies
+        description: List of companies
         columns:
           - name: company_id
             tests:

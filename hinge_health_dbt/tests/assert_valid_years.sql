@@ -1,9 +1,8 @@
-WITH combined_members AS (
-    SELECT * FROM {{ ref('int_combined_members') }}
+with combined_members as (
+    select * from {{ ref('int_members') }}
 )
 
-SELECT *
-FROM combined_members
-WHERE dob > CURRENT_DATE
-    OR dob > CURRENT_DATE
-    OR dob > last_active
+select *
+from combined_members
+where date_of_birth > current_date
+    or date_of_birth > last_active
